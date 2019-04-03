@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <test-checkbox></test-checkbox>
+    <test-display></test-display>
   </div>
 </template>
 
 <script>
-import TestCheckbox from './test/testCheckbox'
+import TestDisplay from './test/testDisplay'
 
 export default {
   name: 'App',
   components: {
-    TestCheckbox,
+    TestDisplay
   },
   provide() {
     return {
