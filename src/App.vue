@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <test-alert></test-alert>
+    <test-table></test-table>
   </div>
 </template>
 
 <script>
-import TestAlert from './test/testAlert'
+import TestTable from './test/testTableRender-3'
 
 export default {
   name: 'App',
   components: {
-    TestAlert
+    TestTable
   },
   provide() {
     return {
