@@ -71,9 +71,28 @@ function findAllComponentDownward(context, componentName) {
   }, [])
 }
 
+/**
+ * 深度拷贝
+ * @param {Object} src
+ */
+function cloneDeep(src) {
+  const clone = Object.assign({}, src)
+  Object.keys(clone).forEach(
+    key =>
+      (clone[key] =
+        typeof src[key] === 'object' ? cloneDeep(src[key]) : src[key])
+  )
+  return Array.isArray(src) && src.length
+    ? (clone.length = src.length) && Array.from(clone)
+    : Array.isArray(src)
+    ? Array.from(src)
+    : clone
+}
+
 export {
   findComponentUpward,
   findAllComponentUpward,
   findComponentDownward,
-  findAllComponentDownward
+  findAllComponentDownward,
+  cloneDeep
 }

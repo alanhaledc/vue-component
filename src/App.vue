@@ -1,16 +1,16 @@
 <template>
   <div class="app">
-    <test-table></test-table>
+    <test-tree></test-tree>
   </div>
 </template>
 
 <script>
-import TestTable from './test/testTableRender-3'
+import TestTree from './test/testTree'
 
 export default {
   name: 'App',
   components: {
-    TestTable
+    TestTree
   },
   provide() {
     return {
